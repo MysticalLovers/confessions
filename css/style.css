@@ -1,12 +1,61 @@
 body {
-  background-image: url('../img/back.jpg');
-  background-repeat: no-repeat;
+  background-image: url("../img/back.png");
+  background-size: cover, cover;
+  background-attachment: fixed;
+  text-align:center;
+  font-family: 'Chewy', cursive;
+  color: #eea5b0;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
-  background-color: #0000FF;
+}
 
-  text-align: center;
-  font-family: 'Fredoka One', cursive;
+#logo{
+  width:5%;
+}
 
-  width: 100%;
-  height: 100%;
+iframe {
+  padding-top: 5%;
+  width:50%;
+}
+
+#content{
+  width:75%;
+  background-color:#555555;
+  border: none;
+  color: #eea5b0;
+  height: 20%;
+  resize: none;
+  border-style: solid;
+  border-width: 3%;
+  border-radius: 5px;
+  font-size: 120%;
+  font-family: 'Chewy', cursive;
+}
+
+#nickname{
+  background-color:#555555;
+  border: none;
+  color: #eea5b0;
+  height: 20%;
+  resize: none;
+  border-style: solid;
+  border-width: 3%;
+  border-radius: 5px;
+  font-size: 120%;
+  font-family: 'Chewy', cursive;
+}
+
+#submit {
+  background-color:#555555;
+  border: none;
+  color: #eea5b0;
+  height: 20%;
+  resize: none;
+  border-style: solid;
+  border-width: 3%;
+  border-radius: 5px;
+  font-size: 120%;
+  font-family: 'Chewy', cursive;
 }

